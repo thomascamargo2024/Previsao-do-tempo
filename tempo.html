@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Dashboard</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- CSS externo -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <!-- Dashboard -->
+  <div class="dashboard">
+    <div class="search-box">
+      <input type="text" id="city-input" placeholder="Digite a cidade...">
+      <button onclick="getWeather()"><i class="fas fa-search"></i></button>
+    </div>
+    <div id="weather-info">
+      <div class="weather-icon"><i class="fas fa-cloud-sun"></i></div>
+      <div class="temperature">--°C</div>
+      <div class="description">Clima</div>
+      <div class="details">
+        <div><i class="fas fa-tint"></i> <span id="humidity">--%</span></div>
+        <div><i class="fas fa-wind"></i> <span id="wind">-- km/h</span></div>
+      </div>
+        <!-- Gráfico de 7 dias -->
+        <div class="chart-container">
+            <canvas id="weeklyChart"></canvas>
+        </div>
+    </div>
+  </div>
+  <!-- JS externo -->
+  <script src="script.js"></script>
+</body>
+</html>

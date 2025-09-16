@@ -1,0 +1,102 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  padding: 20px;
+  transition: background 0.5s ease;
+  background: linear-gradient(to right, #2c3e50, #4ca1af);
+}
+
+.dashboard {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  background: rgba(28, 31, 39, 0.9);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  color: #fff;
+  transition: background 0.5s ease;
+}
+
+.search-box {
+  display: flex;
+  gap: 10px;
+}
+
+.search-box input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+
+.search-box button {
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  background: #2F80ED;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.weather-icon img {
+  width: 100px;
+  height: 100px;
+}
+
+.temperature {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.description {
+  font-size: 20px;
+  text-transform: capitalize;
+}
+
+.details {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.details div {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 16px;
+}
+/* Gráfico dentro da dashboard */
+.chart-container {
+  display: flex;
+  justify-content: center; /* centraliza horizontalmente */
+  align-items: center;     /* centraliza verticalmente */
+  width: 100%;
+  margin-top: 20px;
+}
+
+.chart-container canvas {
+  display: block;          /* remove comportamento inline */
+  width: 90% !important;   /* largura do gráfico */
+  max-width: 100%;
+  height: 200px !important;
+}
+
